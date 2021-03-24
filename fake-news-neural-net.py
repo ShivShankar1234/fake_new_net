@@ -15,6 +15,9 @@ def plot_cmat(y_test, y_pred):
     skplt.plot_confusion_matrix(y_test, y_pred)
     plt.show()
 
+x_train, x_test, y_test, y_train = getEmbeddings("datasets/train.csv")
+
+
 
 """ Basic Neural Network"""
 def baseline_model():
