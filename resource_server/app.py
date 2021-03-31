@@ -30,9 +30,9 @@ def get_key_index():
     args = request.args
 
     try:
-        type = args["resource_type"]
+        resource_type = args["resource_type"]
 
-        allocator = keys_state[type]
+        allocator = keys_state[resource_type]
         resource_index = allocator.get_resource_index()
 
         response = {}
@@ -53,6 +53,7 @@ def get_key_index():
 def get_num_processes():
     json_object = json.load(open("config.json"))
     return int(json_object["num_twitter_keys"])
+    # Should this say "num_processes" instead f "num_twitter_keys"
 
 
 if __name__ == "__main__":
